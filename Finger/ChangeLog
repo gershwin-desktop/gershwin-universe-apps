@@ -1,0 +1,129 @@
+Sun Jan 21 02:01:18 2007  Nicola Pero  <nicola.pero@meta-innovation.com>
+
+	* GNUmakefile: Added precompiled header to demonstrate how to use
+	it.
+	* FingerIncludeAll.h: New file.
+	* main.m: Import the new file at the very
+	beginning.
+	* FingerWindow.m: Same change.
+	* PreferencesController.m: Same change.
+	* TrivialTextView.m: Same change.
+	* Controller.m: Same change.
+	
+Thu Apr 11 23:04:35 2002  Nicola Pero  <n.pero@mi.flashnet.it>
+
+	* PreferencesController.m ([PreferencesController -init]): Updated
+	for newer gnustep-gui - no need to fixup button size computer
+	by the library.
+	* FingerWindow.m ([FingerWindow -init]): Idem.
+	
+Tue Jan  8 16:14:46 2002  Nicola Pero  <n.pero@mi.flashnet.it>
+
+	* main.m (main): Set the windows menu.
+
+Tue Dec 18 15:25:02 2001  Nicola Pero  <nicola@brainstorm.co.uk>
+
+	* main.m (main): Removed unused variable i.
+
+Tue Dec 11 02:25:25 2001  Nicola Pero  <n.pero@mi.flashnet.it>
+
+	* FingerWindow.m ([FingerWindow -init]): Set the font of the whois
+	button.
+	* whois.tiff: Updated.
+	* whois32.tiff: Updated.
+	
+Wed Nov 14 16:55:21 2001  Nicola Pero  <n.pero@mi.flashnet.it>
+	
+	* main.m (main): Added 'n' as a key equivalent for a new Finger 
+	window.
+	* FingerInfo.plist: Version 0.9.1.
+
+Wed Nov 14 16:51:42 2001  Nicola Pero  <n.pero@mi.flashnet.it>
+
+	Added whois command and sizable buttons - based on code
+	contributed by Rob Burns <rburns@softhome.net>.
+	* ping32.tiff: New file.
+	* stop32.tiff: Idem.
+	* traceroute32.tiff: Idem.
+	* finger32.tiff: Idem.
+	* whois.tiff: Idem.
+	* whois32.tiff: Idem.
+	* stop.tiff: New file replacing stop_button.tiff.
+	* stop_button.tiff: Removed.
+	* GNUmakefile (Finger_RESOURCE_FILES): Added the new files; 
+	renamed stop_button.tiff to stop.tiff.
+	* Finger.h (WHOIS_DEFAULT_COMMAND): Define.
+	(DEFAULT_BUTTON_SIZE): Define.
+	* Controller.m ([+initialize]): Set default for WhoisCommand and
+	ButtonSize.
+	* FingerWindow.h (BIG_FONT_SIZE, SMALL_FONT_SIZE): Define.
+	([-startWhois:]): Declare.
+	* FingerWindow.m ([-init]): Added whois button; manage having size
+	of buttons controlled by used defaults.
+	([-startWhois:]): New method.
+	* PreferencesController.h: New ivars for whois button and for 
+	button size popup.  (WHOIS_TAG): Define.
+	* PreferencesController.m ([PreferencesController -init]): Added
+	popup for button size, and textfield for whois command.
+	([-reset], [-resetToDefault:], [-set]): Manage whois command and
+	button size popup too.
+	([-set:]): Synchronize user defaults immediately.
+	([-changePreference:]): Manage whois too.
+	([-controlTextDidEndEditing:]): Idem.
+	* FingerInfo.plist: Version is now 0.9.0.
+	* README: Mention Rob.
+	
+Sun Jun 10 20:09:23 2001  Nicola Pero  <n.pero@mi.flashnet.it>
+
+	* PreferencesController.m ([-changePreference:]): Use an open
+	panel rather than a save panel to choose programs.
+
+Thu Aug  3 19:53:38 2000  Nicola Pero  <nicola@brainstorm.co.uk>
+
+	* FingerInfo.plist: Fixed typo.
+
+Sat Jul 29 22:54:57 2000  Nicola Pero  <nicola@brainstorm.co.uk>
+
+	* Finger.h: Removed preprocessor defines used to display 
+	an info panel.
+	* Controller.m ([-runInfoPanel:]): Removed.
+	* Controller.h: Removed runInfoPanel:
+	* main.m (main): Removed initialize_gnustep_backend; 
+	use orderFrontStandardInfoPanel: to display the info panel;
+	do not set application icon.
+	* FingerInfo.plist: New file.
+	* GNUmakefile: Removed unused includes; (Finger_APPLICATION_ICON):
+	Added.
+	
+Sun Mar 19 01:11:40 2000  Nicola Pero  <n.pero@mi.flashnet.it>
+
+	Added images by Andrew Lindesay <apl@kcbbs.gen.nz>:
+	* finger.tiff: New file.
+	* ping.tiff: New file.
+	* stop_button.tiff: New file.
+	* traceroute.tiff: New file.
+	* GNUmakefile: Updated for images.
+	* main.m: Idem.
+	* FingerWindow.m: Idem.
+	
+Sun Feb 13 01:55:21 2000  Nicola Pero  <n.pero@mi.flashnet.it>
+
+	New program: 
+	* GNUmakefile: New file.
+	* README: Idem.
+	* TODO: Idem.
+	* Finger.h: Idem.
+	* main.m: Idem.
+	* Controller.h: Idem.
+	* Controller.m: Idem.
+	* FingerWindow.h: Idem.
+	* FingerWindow.m: Idem.
+	* PreferencesController.h: Idem.
+	* PreferencesController.m: Idem.
+	* TrivialTextView.h: Idem.
+	* TrivialTextView.m: Idem.
+
+
+
+	
+

@@ -6,10 +6,10 @@ sudo pkg install gershwin-developer
 
 ## Usage examples
 
-To install chromium:
+To install EdenMath:
 
 ```
-cd chromium.app
+cd EdenMath
 gmake
 sudo gmake install
 ```

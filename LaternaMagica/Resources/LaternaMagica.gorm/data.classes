@@ -1,0 +1,111 @@
+{
+    "## Comment" = "Do NOT change this file, Gorm maintains it";
+    AppController = {
+	Actions = (
+	    "addFiles:",
+	    "setScaleToFit:",
+	    "setFullScreen:",
+	    "prevImage:",
+	    "nextImage:",
+	    "removeAllImages:",
+	    "scrambleList:",
+	    "removeImage:",
+	    "eraseImage:",
+	    "rotateImage90:",
+	    "rotateImage180:",
+	    "rotateImage270:",
+	    "saveImageAs:",
+	    "setCompressionType:",
+	    "setCompressionLevel:",
+	    "exportImages:",
+	    "setExportPath:",
+	    "execExportImages:",
+	    "showPreferences:",
+	    "savePreferences:",
+	    "cancelPreferences:",
+	    "print:"
+	);
+	Outlets = (
+	    fileListData,
+	    fileListView,
+	    controlWin,
+	    smallWindow,
+	    smallView,
+	    scrollView,
+	    fitButton,
+	    fieldImageCount,
+	    fullScreenMenuItem,
+	    fullScreenButton,
+	    saveAsMenuItem,
+	    saveOptionsView,
+	    fileTypePopUp,
+	    jpegCompressionField,
+	    jpegCompressionSlider,
+	    prefPanel,
+	    destroyOrRecycleButton,
+	    askBeforeDeletingButton,
+	    exporterPanel,
+	    fieldOutputPath,
+	    fieldWidth,
+	    fieldHeight,
+	    exportProgress,
+	    popupConstraints,
+	    popupFileType,
+	    popupFileQuality
+	);
+	Super = NSObject;
+    };
+    FileTable = {
+	Actions = (
+	);
+	Outlets = (
+	    appController
+	);
+	Super = NSObject;
+    };
+    FirstResponder = {
+	Actions = (
+	    "addFiles:",
+	    "cancelPreferences:",
+	    "eraseImage:",
+	    "execExportImages:",
+	    "exportImages:",
+	    "newAction:",
+	    "nextImage:",
+	    "orderFrontFontPanel:",
+	    "prevImage:",
+	    "removeAllImages:",
+	    "removeImage:",
+	    "rotateImage180:",
+	    "rotateImage270:",
+	    "rotateImage90:",
+	    "saveImageAs:",
+	    "savePreferences:",
+	    "scrambleList:",
+	    "setCompressionLevel:",
+	    "setCompressionType:",
+	    "setExportPath:",
+	    "setFullScreen :",
+	    "setFullScreen:",
+	    "setScaleToFit:",
+	    "showPrefPanel:",
+	    "showPreferences:"
+	);
+	Super = NSObject;
+    };
+    LMFlipView = {
+	Actions = (
+	);
+	Outlets = (
+	    controller
+	);
+	Super = NSImageView;
+    };
+    LMWindow = {
+	Actions = (
+	);
+	Outlets = (
+	);
+	Super = NSWindow;
+    };
+}

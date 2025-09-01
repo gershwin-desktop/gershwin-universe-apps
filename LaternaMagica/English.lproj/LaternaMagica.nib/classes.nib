@@ -1,0 +1,76 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                addFiles = id; 
+                cancelPreferences = id; 
+                eraseImage = id; 
+                execExportImages = id; 
+                exportImages = id; 
+                nextImage = id; 
+                prevImage = id; 
+                print = id; 
+                removeAllImages = id; 
+                removeImage = id; 
+                rotateImage180 = id; 
+                rotateImage270 = id; 
+                rotateImage90 = id; 
+                saveImageAs = id; 
+                savePreferences = id; 
+                scrambleList = id; 
+                setCompressionLevel = id; 
+                setCompressionType = id; 
+                setExportPath = id; 
+                setFullScreen = id; 
+                setScaleToFit = id; 
+                showPreferences = id; 
+            }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                askBeforeDeletingButton = NSButton; 
+                controlWin = NSWindow; 
+                destroyOrRecycleButton = NSButton; 
+                exportProgress = NSProgressIndicator; 
+                exporterPanel = NSPanel; 
+                fieldHeight = NSTextField; 
+                fieldImageCount = NSTextField; 
+                fieldOutputPath = NSTextField; 
+                fieldWidth = NSTextField; 
+                fileListData = FileTable; 
+                fileListView = NSTableView; 
+                fileTypePopUp = NSPopUpButton; 
+                fitButton = NSButton; 
+                fullScreenButton = NSButton; 
+                fullScreenMenuItem = NSMenuItem; 
+                jpegCompressionField = NSTextField; 
+                jpegCompressionSlider = NSSlider; 
+                popupConstraints = NSPopUpButton; 
+                popupFileQuality = NSPopUpButton; 
+                popupFileType = NSPopUpButton; 
+                prefPanel = NSPanel; 
+                saveAsMenuItem = NSMenuItem; 
+                saveOptionsView = NSView; 
+                scrollView = NSScrollView; 
+                smallView = LMFlipView; 
+                smallWindow = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = FileTable; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {appController = AppController; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = LMFlipView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; }; 
+            SUPERCLASS = NSImageView; 
+        }, 
+        {CLASS = LMWindow; LANGUAGE = ObjC; SUPERCLASS = NSWindow; }
+    ); 
+    IBVersion = 1; 
+}

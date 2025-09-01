@@ -1,0 +1,233 @@
+2022-01-29 Sergei Golovin
+	* AppController.h
+	* AppController.m
+	Bring window to front with double-click.
+
+2022-01-29 Riccardo Mottola <rm@gnu.org>
+	* AppController.h
+	* AppController.m
+	Remember scaleToFit preferences, separate sizeToFit action in a separate internal method.
+
+2020-01-15 Riccardo Mottola <rm@gnu.org>
+
+	* PRScale.m
+	Update bilinear scaling from PRICE.
+
+2017-07-27 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+        Remove alpha before saving JPEGs, may cause problems
+
+2017-03-27 Riccardo Mottola <rm@gnu.org>
+
+	* PRScale.m
+	* AppController.m
+	Preserve original image size or resolution
+
+2017-03-13 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+        Retrieve image from view only after cecking the event.
+
+2016-01-24 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+        Always set the title of the window with decorations, even in full-screen mode.
+
+2015-10-16 Riccardo Mottola <rm@gnu.org>
+
+	* PRScale.m
+	Import from PRICE optimized code with cleaner corner cases handling.
+
+2015-10-07 Riccardo Mottola <rm@gnu.org>
+
+	* PRScale.m
+	Fix destination offset with correct bytes per row.
+
+2015-10-06 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Convert representation type if it is alphafirst on export, or scale filter chokes.
+
+2015-10-06 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Use ImageRep pixelWide and pixelHigh instead of size.
+
+2014-02-05 Riccardo Mottola <rm@gnu.org>
+
+	* FileTable.m (addPathAndRecurse)
+	add a local autorelease pool to wasy loading of many images.
+
+2014-02-02 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+        Preserve image information during rotation.
+
+2014-01-19 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m (setFullScreen)
+	Release the image from the view being switched out, to save memory.
+	Smaller optimization in the image setting calls.
+
+2014-01-19 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m (changeImage)
+	Optimize display in case of rotaded images.
+
+2013-12-24 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+        Remove unnecessary [window displayIfNeeded]
+
+2013-12-22 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Add notification observers in awake from nib, not init.
+
+2013-07-14 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m (execExportImages)
+	Rotate image before exporting it, if it had a rotation set.
+
+2013-06-02 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.h
+	* AppController.m
+	* LMFlipView.m
+	* English.lproj/LaternaMagica.nib
+	Route printing to the FlipView and start print operation from there.
+
+2013-06-02 Riccardo Mottola <rm@gnu.org>
+
+	* LMImage.m
+        Correctly add successive rotations.
+
+2013-05-27: Sebastian Reitenbach <sebastia@l00-bugdead-prods.de>
+	* AppController.m, LMFlipView.m
+	  revert stuff from yesterday, and only leave the 
+	  l and r keys work
+
+2013-05-26: Sebastian Reitenbach <sebastia@l00-bugdead-prods.de>
+	* AppController.m
+	  make rotation clockwise
+	* LMFlipView.m
+	  add r, f, l keys to performKeyEquivalent:, to call
+	  rotateImage90, 180, 270 to be able to rotate with
+	  keyboard in full screen mode
+
+2013-02-12 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.h
+	Fix warning and transition to NSInteger
+
+2013-02-08: Sebastian Reitenbach <sebastia@l00-bugdead-prods.de>
+	* FileTable.m
+	  int -> NSInteger transition
+
+2013-01-18 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.h
+	* AppController.m
+	* FileTable.h
+	* FileTable.m
+	* Resources/LaternaMagica.gorm
+	Show image count
+
+2013-01-09 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Call directly rotate byAngle method, so that redrawing twice is avoided.
+
+2013-01-09 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Separate rotation method from actions.
+
+2013-01-08 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Remember image rotation
+
+2013-01-08 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Invoke correct method.
+
+2013-01-08 Riccardo Mottola <rm@gnu.org>
+
+	* LMImage.h
+	* LMImage.m
+	New class to hold specific image information.
+
+	* AppController.m
+	* FileTable.h
+	* FileTable.m
+	* GNUMakefile
+	Use the new LMImage class to hold information instead of several arrays.
+
+2013-01-04 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Make "Add" work recursively again.
+
+	* FileTable.h
+	* FileTable.m
+	Extract recursive path search into a method.
+
+2013-01-01 Riccardo Mottola <rm@gnu.org>
+
+	* FileTable.m
+	Make the files to ignore list an array, no not accept unwanted files during drop validation.
+
+2012-12-31 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	* FileTable.m
+	Move directory recursion to FileTable class, accept directories in drag&drop.
+
+2012-12-25 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	* FileTable.m
+	Table drag-target, for files only.
+
+2012-12-24 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	GS key-window hack, for GWorkspace cooperation
+
+2012-04-17 Riccardo Mottola <rm@gnu.org>
+
+	* FileTable.m
+	Fix random generator to work in the [0, count) range
+
+2012-04-17 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m
+	Fix wrong type.
+
+2011-08-25 Riccardo Mottola <rm@gnu.org>
+
+	* AppController.m:
+	Set random seed
+
+	* LMFlipView.m:
+	Recognize space as next
+
+2011-08-10 Riccardo Mottola <rm@gnu.org>
+
+	* FileTable.[h,m]
+	* AppController.[h,m]
+	* English.lproj/LaternaMagica.nib
+	Scramble list.
+
+2011-01-27 Riccardo Mottola <rm@gnu.org>
+	* AppController.h
+	* AppController.m
+	* English.lproj/LaternaMagica.nib
+	clear list command.
+
+2011-01-22 Riccardo Mottola <rm@gnu.org>
+	*  LMFlipView.m
+	Track delete, backspace, up and down events
